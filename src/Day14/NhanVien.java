@@ -9,7 +9,7 @@ package Day14;
  *
  * @author ThuyVT
  */
-public class NhanVien {
+public class NhanVien implements Comparable<NhanVien>{
     private String ten;
     private String ma;
     private int luong;
@@ -53,5 +53,18 @@ public class NhanVien {
     
     public int tinhLuong() {
         return this.luong * 22;
+    }
+
+    @Override
+    public int compareTo(NhanVien o) {
+        /* Sap xep tang dan, gia tri so sanh la string
+        return this.ma.compareTo(o.getMa()); */
+        /* Sap xep giam dan theo ten 
+        return o.getTen().compareTo(this.ten);
+        */
+        /* Sap xep tang dan theo luong
+        return this.luong - o.getLuong(); */
+        // Sap xep giam dan theo luong
+        return o.getLuong() - this.luong;
     }
 }

@@ -24,6 +24,8 @@ public class Main {
             System.out.println("3.    Xóa NV theo mã NV nhập vào");
             System.out.println("4.    Tìm nhân viên theo mã NV nhập vào");
             System.out.println("5.    Xuất danh sách NV theo khoảng lương nhập vào");
+            System.out.println("6. Ke thua");
+            System.out.println("7. Sap xep");
             System.out.println("0.   Thoát");
             System.out.println("Nhap chuong trinh can chay");
             menu = Integer.parseInt(sc.nextLine());
@@ -46,6 +48,14 @@ public class Main {
                 }
                 case 5 -> {
                     quanLy.timTrongKhoang();
+                    break;
+                }
+                case 6 -> {
+                    quanLy.keThua();
+                    break;
+                }
+                case 7 -> {
+                    quanLy.sapXep();
                     break;
                 }
                 case 0 -> {
